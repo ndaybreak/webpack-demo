@@ -15,7 +15,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.js$/,
-				exclude: /(node_modules|bower_components)/,
+				exclude: /node_modules/,
 				//include: /src/,
 				use: {
 					loader: 'babel-loader',
@@ -23,6 +23,76 @@ module.exports = {
 						presets: ['env']
 					}
 				}
+			},
+			{
+				test: /\.html$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'html-loader'
+				}
+			},
+			{
+				test: /\.tpl$/,
+				exclude: /node_modules/,
+				use: 'ejs-loader'
+			},
+			{
+				test: /\.css$/,
+				exclude: /node_modules/,
+				use: [
+					{
+						loader: 'style-loader'
+					},
+					{
+						loader: 'css-loader',
+						options: {
+							importLoaders: 1
+						}
+					},
+					{
+						loader: 'postcss-loader',
+						options: {
+							plugins: (loader) => [
+								//require('postcss-import')({ root: loader.resourcePath }),
+								//require('postcss-cssnext')(),
+								require('autoprefixer')()
+								//require('cssnano')()
+							]
+						}
+					}
+				]
+			},
+			{
+				test: /\.less$/,
+				exclude: /node_modules/,
+				use: [
+					{
+						loader: 'style-loader'
+					},
+					{
+						loader: 'css-loader',
+						options: {
+							importLoaders: 1
+						}
+					},
+					{
+						loader: 'postcss-loader',
+						options: {
+							plugins: (loader) => [
+								//require('postcss-import')({ root: loader.resourcePath }),
+								//require('postcss-cssnext')(),
+								require('autoprefixer')()
+								//require('cssnano')()
+							]
+						}
+					},
+					{
+						loader: 'less-loader',
+						options: {
+							noIeCompat: true
+						}
+					}
+				]
 			}
 		]
 	},
