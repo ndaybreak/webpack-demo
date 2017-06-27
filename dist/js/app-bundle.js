@@ -641,7 +641,7 @@ __p += '\r\n        ' +
 ((__t = ( arr[i]  )) == null ? '' : __t) +
 '\r\n    ';
  } ;
-__p += '\r\n</div>';
+__p += '\r\n\r\n    <div class="test">\r\n        <img src="img/38.jpg" alt="">\r\n    </div>\r\n</div> ';
 
 }
 return __p
