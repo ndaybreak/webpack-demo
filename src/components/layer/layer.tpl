@@ -4,7 +4,8 @@
         <%= arr[i]  %>
     <% } %>
 
-    <div class="test">
-        <img src="img/38.jpg" alt="">
+    css<div class="img-test">
     </div>
-</div> 
+</div>
+
+内联tpl<img src="${ require('../../assets/42.jpg') }" alt="">

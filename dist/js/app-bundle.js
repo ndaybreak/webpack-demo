@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -195,7 +195,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(9);
+var	fixUrls = __webpack_require__(10);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -511,6 +511,12 @@ function updateLink (link, options, obj) {
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__.p + "assets/42-23593.jpg";
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
@@ -518,11 +524,11 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _layer = __webpack_require__(7);
+var _layer = __webpack_require__(8);
 
 var _layer2 = _interopRequireDefault(_layer);
 
-var _layer3 = __webpack_require__(8);
+var _layer3 = __webpack_require__(9);
 
 var _layer4 = _interopRequireDefault(_layer3);
 
@@ -538,13 +544,13 @@ function layer() {
 exports.default = layer;
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(6);
+var content = __webpack_require__(7);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -569,17 +575,17 @@ if(false) {
 }
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _layer = __webpack_require__(2);
+var _layer = __webpack_require__(3);
 
 var _layer2 = _interopRequireDefault(_layer);
 
-var _common = __webpack_require__(3);
+var _common = __webpack_require__(4);
 
 var _common2 = _interopRequireDefault(_common);
 
@@ -597,7 +603,7 @@ var App = function App() {
 new App();
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -605,13 +611,13 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".layer {\n  width: 600px;\n  height: 200px;\n  background: green;\n}\n.layer > div {\n  width: 400px;\n  height: 100px;\n  background-color: red;\n}\n", ""]);
+exports.push([module.i, ".layer {\n  width: 600px;\n  height: 200px;\n  background: green;\n}\n.layer > div {\n  width: 400px;\n  height: 100px;\n  background-color: red;\n}\n.img-test {\n  background: url(" + __webpack_require__(2) + ");\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -625,8 +631,8 @@ exports.push([module.i, "html,\r\nbody {\r\n    margin: 0;\r\n    padding: 0;\r\
 
 
 /***/ }),
-/* 7 */
-/***/ (function(module, exports) {
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
 
 module.exports = function (obj) {
 obj || (obj = {});
@@ -641,20 +647,22 @@ __p += '\r\n        ' +
 ((__t = ( arr[i]  )) == null ? '' : __t) +
 '\r\n    ';
  } ;
-__p += '\r\n\r\n    <div class="test">\r\n        <img src="img/38.jpg" alt="">\r\n    </div>\r\n</div> ';
+__p += '\r\n\r\n    css<div class="img-test">\r\n    </div>\r\n</div>\r\n\r\n内联tpl<img src="' +
+((__t = ( __webpack_require__(2) )) == null ? '' : __t) +
+'" alt="">';
 
 }
 return __p
 }
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(5);
+var content = __webpack_require__(6);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -679,7 +687,7 @@ if(false) {
 }
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 

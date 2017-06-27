@@ -93,6 +93,21 @@ module.exports = {
 						}
 					}
 				]
+			},
+			{
+				test: /\.(pgn|jpg|gif)$/,
+				use: [
+					{
+						loader: 'url-loader',  // 当文件小于10000B 时转化为base64位， 大于时以file-loader来加载; 若不需要转化base64, 直接使用file-loader
+						options: {
+							limit: 10000,
+							name: 'assets/[name]-[hash:5].[ext]' //指定文件的输出路径   hash:5  5位的hash值
+						}
+					},
+					{
+						loader: 'image-webpack-loader' // 可以通过配置参数优化压缩率
+					}
+				]
 			}
 		]
 	},
